@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Code
 
 # In[10]:
 
@@ -159,6 +158,7 @@ def run_search(person, image_collection):
     Returns a visual output of search result for that person in image files'
     corresponding to the file names in which the person was found and a list of faces extracted from that file.
     """
+    
     images = load_images(image_collection)
     out = get_output(person, images)
     for k, v in out.items():
@@ -170,28 +170,4 @@ def run_search(person, image_collection):
             display(display_images(v))
             print('\n')
 
-
-# ## Search results
-
-# In[17]:
-
-
-small = 'readonly/small_img.zip'
-regular = 'readonly/images.zip'
-
-
-# ### Christopher in small image set
-
-# In[18]:
-
-
-run_search('Christopher', small)
-
-
-# ### Mark in full image set
-
-# In[19]:
-
-
-run_search('Mark', regular)
 
